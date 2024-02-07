@@ -36,25 +36,6 @@
     
     
     <entry>
-      <title>每一天梦想实现</title>
-      <link href="/archives/44179.html"/>
-      <url>/archives/44179.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="五个科学有效的自律方法"><a href="#五个科学有效的自律方法" class="headerlink" title="五个科学有效的自律方法"></a>五个科学有效的自律方法</h1><h2 id="1-把最重要的事放在最前面"><a href="#1-把最重要的事放在最前面" class="headerlink" title="1.把最重要的事放在最前面"></a>1.把最重要的事放在最前面</h2><p>人清晨的自控力比下午好，下午比晚上好，放松自我留到晚上做。<br><strong>忍不住想偷懒了</strong> 就马上告诫自己，如果现在偷懒，今天都要荒废了。<br>回想一下<strong>自律失败</strong>会有什么后果。<br><strong>早起先不要玩手机，直接进入背单词状态。</strong></p><h2 id="2-把目标定的具体"><a href="#2-把目标定的具体" class="headerlink" title="2. 把目标定的具体"></a>2. 把目标定的具体</h2><p>大脑对具象化的东西印象更深，<strong>计划制定得越具体，执行起来就会越容易。</strong><br><strong>可以细分到每天，我要完成什么任务。</strong></p><h2 id="3-保持自己的视线中不存在手机"><a href="#3-保持自己的视线中不存在手机" class="headerlink" title="3. 保持自己的视线中不存在手机"></a>3. 保持自己的视线中不存在手机</h2><p><strong>每摸一次手机，都会使得下一次摸手机变得更容易</strong>，要想戒掉手机，首先就是克制当下的自己不去玩手机。</p><h2 id="4-保持高质量的睡眠"><a href="#4-保持高质量的睡眠" class="headerlink" title="4. 保持高质量的睡眠"></a>4. 保持高质量的睡眠</h2><p><strong>深度睡眠能够缓解我们的疲劳，也就是能够充电。</strong><br><strong>睡前尽量不要看电子屏幕。</strong>（这一点估计很难做到）<br>探索合适自己的方法。</p><p>如果直接从深度睡眠中醒来，会使得大脑感觉到疲惫。</p><p>提高睡眠质量的方法：<strong>提高自己的深睡时间</strong></p><h2 id="5-不要跟不自律的人一起学习"><a href="#5-不要跟不自律的人一起学习" class="headerlink" title="5. 不要跟不自律的人一起学习"></a>5. 不要跟不自律的人一起学习</h2><p><strong>延迟快感</strong>，最好的东西要留在最后享受。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 读书笔记 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>这是一条笔记</title>
       <link href="/archives/14832.html"/>
       <url>/archives/14832.html</url>
@@ -67,6 +48,19 @@
           <category> 随笔 </category>
           
       </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo常用命令</title>
+      <link href="/archives/33f59116.html"/>
+      <url>/archives/33f59116.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>每一步操作之后都要执行 hexo g 重新生成文件</strong><br>每一次更改之后需要执行的操作：</p><ol><li>清理缓存</li><li>重新生成文件</li><li>本地运行预览</li><li>上传到github仓库</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章名字&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      
       
       
     </entry>
@@ -93,19 +87,6 @@
             <tag> 教程 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>hexo常用命令</title>
-      <link href="/archives/33f59116.html"/>
-      <url>/archives/33f59116.html</url>
-      
-        <content type="html"><![CDATA[<p><strong>每一步操作之后都要执行 hexo g 重新生成文件</strong><br>每一次更改之后需要执行的操作：</p><ol><li>清理缓存</li><li>重新生成文件</li><li>本地运行预览</li><li>上传到github仓库</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章名字&quot;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
       
     </entry>
     
