@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="/archives/0.html"/>
-      <url>/archives/0.html</url>
-      
-        <content type="html"><![CDATA[<p>这是一个测试文件</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>测试</title>
       <link href="/archives/3c47b44b.html"/>
       <url>/archives/3c47b44b.html</url>
@@ -48,19 +35,6 @@
           <category> 随笔 </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>hexo常用命令</title>
-      <link href="/archives/33f59116.html"/>
-      <url>/archives/33f59116.html</url>
-      
-        <content type="html"><![CDATA[<p><strong>每一步操作之后都要执行 hexo g 重新生成文件</strong><br>每一次更改之后需要执行的操作：</p><ol><li>清理缓存</li><li>重新生成文件</li><li>本地运行预览</li><li>上传到github仓库</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章名字&quot;</span><br></pre></td></tr></table></figure>]]></content>
-      
       
       
     </entry>
