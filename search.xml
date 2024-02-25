@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>Django使用in查询之后按照列表位置进行排序</title>
+      <link href="/archives/0.html"/>
+      <url>/archives/0.html</url>
+      
+        <content type="html"><![CDATA[<p>在Django中，想要在执行了in查询之后虚拟地根据一个集合列表进行排序，可以使用annotate()结合F()表达式或者条件表达式来实现自定义排序。</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p> 我需要根据列表<code>book_list=[7,3,25]</code>,将查询的出来的Queryset中的<code>id</code>字段按照其在列表中的位置进行排序，如<code>id</code>为7是第一项，<code>id</code>为3是第二项，<code>id</code>为25是第三项.</p><h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">from</span> django.db.models <span class="keyword">import</span> Case, When, Value, IntegerField</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 假设这是我们需要根据自定义顺序排序的值列表</span></span><br><span class="line">book_list=[<span class="number">7</span>,<span class="number">3</span>,<span class="number">25</span>]</span><br><span class="line"> </span><br><span class="line">items = Book.objects.<span class="built_in">filter</span>(id__in=book_list).annotate(</span><br><span class="line">    custom_sort=Case(</span><br><span class="line">        *[When(<span class="built_in">id</span>=value, then=pos) <span class="keyword">for</span> pos, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(book_list, start=<span class="number">1</span>)],</span><br><span class="line">        default=IntegerField()</span><br><span class="line">    )</span><br><span class="line">).order_by(<span class="string">&#x27;custom_sort&#x27;</span>)</span><br></pre></td></tr></table></figure><p>Case&#x2F;When语句将为每个对象分配一个虚拟的custom_sort值，该值基于对象的id字段在book_list列表中的位置。如果id的值不在book_list中，则使用默认值。然后根据这个虚拟的custom_sort字段进行排序。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 踩坑记录 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>测试</title>
       <link href="/archives/3c47b44b.html"/>
       <url>/archives/3c47b44b.html</url>
       
-        <content type="html"><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-1"><a href="#四级标题-1" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-2"><a href="#四级标题-2" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-3"><a href="#四级标题-3" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-4"><a href="#四级标题-4" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-5"><a href="#四级标题-5" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-6"><a href="#四级标题-6" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-7"><a href="#四级标题-7" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-8"><a href="#四级标题-8" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-9"><a href="#四级标题-9" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-10"><a href="#四级标题-10" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-11"><a href="#四级标题-11" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-12"><a href="#四级标题-12" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-13"><a href="#四级标题-13" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-14"><a href="#四级标题-14" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-15"><a href="#四级标题-15" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-16"><a href="#四级标题-16" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-17"><a href="#四级标题-17" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-18"><a href="#四级标题-18" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-19"><a href="#四级标题-19" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-20"><a href="#四级标题-20" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-21"><a href="#四级标题-21" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-22"><a href="#四级标题-22" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-23"><a href="#四级标题-23" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-24"><a href="#四级标题-24" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-25"><a href="#四级标题-25" class="headerlink" title="四级标题"></a>四级标题</h4><h4 id="四级标题-26"><a href="#四级标题-26" class="headerlink" title="四级标题"></a>四级标题</h4><p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测测试测试测测试测试测试测试测试测试测试测试测试测试测试<br>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>]]></content>
+        <content type="html"><![CDATA[<p>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功</p>]]></content>
       
       
       <categories>
