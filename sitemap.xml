@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://nagato12580.github.com/archives/0.html</loc>
+    <loc>https://nagato12580.github.io/archives/0.html</loc>
     
     <lastmod>2024-02-25</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/tags/index.html</loc>
+    <loc>https://nagato12580.github.io/tags/index.html</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/link/index.html</loc>
+    <loc>https://nagato12580.github.io/link/index.html</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/images/index.html</loc>
+    <loc>https://nagato12580.github.io/images/index.html</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/categories/index.html</loc>
+    <loc>https://nagato12580.github.io/categories/index.html</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/archives/58913.html</loc>
+    <loc>https://nagato12580.github.io/archives/58913.html</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/Day%20Planners/Day%20Planner-20221224.html</loc>
+    <loc>https://nagato12580.github.io/Day%20Planners/Day%20Planner-20221224.html</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/Template/hexo%E6%A8%A1%E6%9D%BF.html</loc>
+    <loc>https://nagato12580.github.io/Template/hexo%E6%A8%A1%E6%9D%BF.html</loc>
     
     <lastmod>2024-02-07</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/archives/3c47b44b.html</loc>
+    <loc>https://nagato12580.github.io/archives/3c47b44b.html</loc>
     
     <lastmod>2022-12-24</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/archives/14832.html</loc>
+    <loc>https://nagato12580.github.io/archives/14832.html</loc>
     
     <lastmod>2022-12-23</lastmod>
     
@@ -93,7 +93,7 @@
   
 
   <url>
-    <loc>https://nagato12580.github.com/</loc>
+    <loc>https://nagato12580.github.io/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -101,7 +101,7 @@
 
   
   <url>
-    <loc>https://nagato12580.github.com/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://nagato12580.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -110,28 +110,28 @@
 
   
   <url>
-    <loc>https://nagato12580.github.com/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://nagato12580.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://nagato12580.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://nagato12580.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://nagato12580.github.com/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://nagato12580.github.io/categories/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
