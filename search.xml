@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Django使用in查询之后按照列表位置进行排序</title>
+      <link href="/archives/0.html"/>
+      <url>/archives/0.html</url>
+      
+        <content type="html"><![CDATA[<p>在Django中，想要在执行了in查询之后虚拟地根据一个集合列表进行排序，可以使用annotate()结合F()表达式或者条件表达式来实现自定义排序。</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p> 我需要根据列表<code>book_list=[7,3,25]</code>,将查询的出来的Queryset中的<code>id</code>字段按照其在列表中的位置进行排序，如<code>id</code>为7是第一项，<code>id</code>为3是第二项，<code>id</code>为25是第三项.</p><h2 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h2> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">from</span> django.db.models <span class="keyword">import</span> Case, When, Value, IntegerField</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 假设这是我们需要根据自定义顺序排序的值列表</span></span><br><span class="line">book_list=[<span class="number">7</span>,<span class="number">3</span>,<span class="number">25</span>]</span><br><span class="line"> </span><br><span class="line">items = Book.objects.<span class="built_in">filter</span>(id__in=book_list).annotate(</span><br><span class="line">    custom_sort=Case(</span><br><span class="line">        *[When(<span class="built_in">id</span>=value, then=pos) <span class="keyword">for</span> pos, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(book_list, start=<span class="number">1</span>)],</span><br><span class="line">        default=IntegerField()</span><br><span class="line">    )</span><br><span class="line">).order_by(<span class="string">&#x27;custom_sort&#x27;</span>)</span><br></pre></td></tr></table></figure><p>Case&#x2F;When语句将为每个对象分配一个虚拟的custom_sort值，该值基于对象的id字段在book_list列表中的位置。如果id的值不在book_list中，则使用默认值。然后根据这个虚拟的custom_sort字段进行排序。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 踩坑记录 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试</title>
+      <link href="/archives/3c47b44b.html"/>
+      <url>/archives/3c47b44b.html</url>
+      
+        <content type="html"><![CDATA[<p>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功<br>刚刚设置了自动部署，看一下是否成功</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>这是一条笔记</title>
+      <link href="/archives/14832.html"/>
+      <url>/archives/14832.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="一个笔记"><a href="#一个笔记" class="headerlink" title="一个笔记"></a>一个笔记</h1><p>测试用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo常用命令</title>
+      <link href="/archives/58913.html"/>
+      <url>/archives/58913.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>每一步操作之后都要执行 hexo g 重新生成文件</strong><br>每一次更改之后需要执行的操作：</p><ol><li>清理缓存</li><li>重新生成文件</li><li>本地运行预览</li><li>上传到github仓库</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章的名字&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
